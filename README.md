@@ -1,8 +1,8 @@
 # ideh-ctf-2021-writeups
 # waht-u-have-done challenge
 # solution
- The tiff image "ctf.tiff" is a scrambled/permuted image using a permutation map with 256 elements for rows and columns.
- The CTF image contains an expression written in rail_fence cipher with 4 rails saying "Paae5sFettMphL26eOeiruinlTatBtfhlmossyTe"
+ The tiff image "ctf.tiff" is a scrambled/permuted image using a permutation map with 256 elements for rows and columns.\n
+ The CTF image contains an expression written in rail_fence cipher with 4 rails saying "Paae5sFettMphL26eOeiruinlTatBtfhlmossyTe"\n
  This expression (when decrypted) it yeilds to "PermutationMaplsTheLast256BytesOfTheFile" which means that the CTF image is a permuted image, and must be descrambled back.
  So the last 256 bytes of the file is simply the permutation map.
  We use this map for de-scrambling rows and columns of the image, simply by mapping each row/column entry back to the entry of the key
